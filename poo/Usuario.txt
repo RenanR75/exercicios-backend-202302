@@ -1,0 +1,4 @@
+('Cristiano Ronaldo', 36, 2000000, None)
+('Neymar JR', 33, 23000000, None)
+('Cristiano Ronaldo', 36, 2000000, None)
+('Neymar JR', 33, 23000000, None)
