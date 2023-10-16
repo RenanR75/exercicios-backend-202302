@@ -8,10 +8,16 @@ class Carro ( Veiculo.Veiculo ):
         self.marcha = 0
     def ligar( self ):
         return self.marcha
-    def desligar( self):
-
+    def desligar( self ):
+        self.marcha = 0
+    def acelerar( self):
+        print("O carro anda")
+    def frear( self ):
+        print("O carro frea")
 """ Aqui comeca o teste """
 CarroNovo = Carro('8885AZKG01Z12A33921312', 'JAC', 'J3', '2022', 2.0, 'HATCH')
 print(CarroNovo.get_tipo())
 print(CarroNovo.potencia)
 print(CarroNovo.tipoCarro)
+print(CarroNovo.ligar())
+CarroNovo.acelerar()

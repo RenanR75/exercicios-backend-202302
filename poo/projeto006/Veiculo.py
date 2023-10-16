@@ -14,3 +14,7 @@ class Veiculo:
         pass
     def desligar( self ):
         pass
+    def acelerar( self):
+        pass
+    def frear( self ):
+        pass
