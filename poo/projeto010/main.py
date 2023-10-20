@@ -4,4 +4,4 @@ app= fastapi.FastAPI()
 
 @app.get("/")
 def indice():
-    return{"mensagem" : "Beijos minha flor"}
+    return{"mensagem" : "Olá mundo"}
