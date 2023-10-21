@@ -8,4 +8,4 @@ def indice():
 
 @app.get("/mundo")
 def indiceMundo():
-     return{"mensagem" : "Olá todo mundo"}
+     return{"mensagem" : "Olá todo mundo"}S
