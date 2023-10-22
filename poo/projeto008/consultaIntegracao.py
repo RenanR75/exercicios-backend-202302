@@ -1,7 +1,7 @@
 #import required modules
 import requests, json, sys, pprint
 #Enter your APIkey here
-api_key = "bdd4b856"
+api_key = "Key"
 nome_do_filme = "Titanic"
 # base_url variable to store url
 base_url = "http://www.omdbapi.com/?"
