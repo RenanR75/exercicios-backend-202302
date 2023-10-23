@@ -11,5 +11,5 @@ def indiceMundo():
     return{"mensagem" : "Ola Todo Mundo."}
 
 @app.get("/marte")
-def indiceMartee():
+def indiceMartee( nome_planeta: str = fastapi.Path(..., description="Preencha)):
     return{"mensagem" : "Olá residentes da Terra."}
