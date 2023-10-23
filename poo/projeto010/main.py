@@ -12,4 +12,4 @@ def indiceMundo():
 
 @app.get("/vialactea/{nome_planeta}")
 def indiceViaLactea( nome_planeta: str = fastapi.Path(..., description="Preencha com o nome do planeta")):
-    return{"mensagem": "Ola {nome_planeta}".format(nome_planeta)}
+    return{"mensagem" : "Ola {0}".format(nome_planeta)}
