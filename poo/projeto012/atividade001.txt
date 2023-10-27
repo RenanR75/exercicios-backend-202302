@@ -36,7 +36,12 @@ Fazer a carga para o sql
 Apresentar show databases;
     show databases;
 Ver cocumentação em:
-    
+    https://www.mariadbtutorial.com/getting-started/mariadb-sample-databases/
+
+Executar para testar a coneção com o BD:
+    python3 connection.py
+Executar para testar a coneção com o BD + o fastapi:
+    uvicorn main:app --reload
 
 
 "Entrar' no container"
