@@ -11,4 +11,5 @@ def getContinents():
     for data_continents in mycursor:
         Continents_list.append(data_continents)
     mycursor.close()
-    
+    return {"Continents": Continents_list}
+
