@@ -10,4 +10,5 @@ def getContinents():
     mycursor= connection.mydb.cursor(dictionary=True)
     for data_continents in mycursor:
         Continents_list.append(data_continents)
-    mycursor()
+    mycursor.close()
+    
