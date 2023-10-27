@@ -4,7 +4,7 @@ app = fastapi.FastAPI()
 def hello_world_root():
     return {"Olá": "Funciona"}
 
-@app.get("getContinents")
+@app.get("/getContinents")
 def getContinents():
     Continents_list = []
     mycursor= connection.mydb.cursor(dictionary=True)
