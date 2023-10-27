@@ -2,8 +2,9 @@ Api conectando ao mysql local
 
 1 - Ambiente do fastapi + uvicorn
     Verifica
-        pip3 list | grep-i fastapi
-        pip3 list | grep-i uvicorn
+        pip3 list | grep -i fastapi
+        pip3 list | grep -i uvicorn
+        pip3 list | grep -i mysql-connector
     Instala
         pip3 install fastapi
         pip3 install uvicorn
