@@ -25,6 +25,10 @@ Subir o container do mariadb
 
 Fazer download
     wget https://www.mariadbtutorial.com/wp-content/uploads/2019/10/nation.zip
+    unzip nation.zip
+
+Conectar ao mysql do container
+    mysql -h localhost -P 3306 --protocol=tcp -u root -p
 
 'Entrar' no container
     docker exec -it mariadb bash
