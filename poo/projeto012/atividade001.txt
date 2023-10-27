@@ -11,9 +11,11 @@ Api conectando ao mysql local
 
     Instalar:
         pip3 install mysql-connector
-docker run -d --name mariadb --env MARIADB_PASSWORD=****** --env MARIADB_ROOT_PASSWORD=****** -p 3306:3306 mariadb:10.4
+
 docker run -d --name mariadb --env MARIADB_PASSWORD=mypass --env MARIADB_ROOT_PASSWORD=mypass -p 3306:3306 mariadb:10.4
 
 docker ps
+Lista imagens de Container
 docker image
+Subir o container do mariadb
 docker exec -it mariadb bash
