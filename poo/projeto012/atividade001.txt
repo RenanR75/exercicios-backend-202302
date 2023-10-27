@@ -44,6 +44,8 @@ Executar para testar a coneção com o BD + o fastapi:
     uvicorn main:app --reload
 
 
-"Entrar' no container"
-    docker exec -it mariadb bash
+#####################################
+...plus
+"Entrar" no container
+        docker exec -it mariadb bash
 
