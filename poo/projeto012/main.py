@@ -19,7 +19,7 @@ def getContinents():
 def getContinents(continent_id : int):
     Continents_list = []
     mycursor= connection.mydb.cursor(dictionary=True)
-    sql="select * from continents where continent_id = {0}".format(continent_id))
+    sql="select * from continents where continent_id = {0}".format(continent_id)
     mycursor.execute(sql)
     for data_continents in mycursor:
         Continents_list.append(data_continents)
