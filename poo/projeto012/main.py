@@ -40,11 +40,11 @@ def getRegions():
 
 @app.get("/getRegion/{continent_id}")
 def getRegion(continent_id : int):
-    Continents_list = []
-    mycursor= connection.mydb.cursor(dictionary=True)
-    sql="select * from continents where continent_id = {0}".format(continent_id)
+    Regions_list = []
+    mycursor = connection.mydb.cursor(dictionary=True)
+    sql="select * from regions where continent_id = {0}".format(continent_id)
     mycursor.execute(sql)
     for data_regions in mycursor:
-        Continents_list.append(data_regions)
+        Regions_list.append( data_regions )
     mycursor.close()
-    return {"regions": regions_list}
+    return {"Region": Regions_list}
