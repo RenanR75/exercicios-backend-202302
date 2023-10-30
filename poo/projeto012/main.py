@@ -5,16 +5,16 @@ app = fastapi.FastAPI()
 def hello_world_root():
     return {"Olá": "Funciona"}
 
-@app.get("/getContinents")
-def getContinents():
-    Continents_list = []
+@app.get("/getregion")
+def getregion():
+    region = []
     mycursor = connection.mydb.cursor(dictionary=True)
-    sql = "select * from continents"
+    sql = "select * from region"
     mycursor.execute(sql)
-    for data_continents in mycursor:
-        Continents_list.append( data_continents )
+    for region in mycursor:
+        region_id.append( region )
     mycursor.close()
-    return {"Continents": Continents_list}
+    return {"regions": region_id}
 
 @app.get("/getContinents/{continent_id}")
 def getContinents(continent_id : int):
