@@ -15,7 +15,7 @@ Api conectando ao mysql local
 docker run -d --name mariadb --env MARIADB_PASSWORD=mypass --env MARIADB_ROOT_PASSWORD=mypass -p 3306:3306 mariadb:10.4
 
 Container em execução
-    docker ps
+    docker ps - 9e6cd5fe83e8
 
 Lista imagens de Container
     docker image
