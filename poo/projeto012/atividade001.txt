@@ -43,9 +43,15 @@ Executar para testar a coneção com o BD:
 Executar para testar a coneção com o BD + o fastapi:
     uvicorn main:app --reload
 
+Leitura: Container vs VMs
+    https://www.redhat.com/pt-br/topics/containers/containers-vs-vms
+
+
 
 #####################################
 ...plus
 "Entrar" no container
         docker exec -it mariadb bash
+
+
 
