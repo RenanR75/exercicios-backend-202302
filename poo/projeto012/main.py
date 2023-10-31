@@ -27,6 +27,16 @@ def getContinents(continent_id : int):
     mycursor.close()
     return {"Continents": Continents_list}
 
+@app.post('/createContinent/{continent_name}')
+def createContinent(continent_name: str):
+    if continent_name == "":
+        return {'Error': 'Item vazio'}
+    mycursor = connection.mydb.cursor(dictionary=True)
+    sql=" INSERT INTO continents (name) values ('{0}')".format(continent_name)
+    mycursor.execute(sql)
+    mycursor.close()
+    return {"Continent: OK"}
+
 @app.get("/getRegions")
 def getRegions():
     Regions_list = []
