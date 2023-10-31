@@ -1,4 +1,4 @@
-Api conectando ao mysql local
+Api conectando ao mysql local - porta 8000(fastapi)
 
 1 - Ambiente do fastapi + uvicorn
     Verifica
