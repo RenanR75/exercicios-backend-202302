@@ -1,4 +1,5 @@
-import fastapi, connection
+import fastapi, connection, json
+from pydantic import BaseModel, Field
 app = fastapi.FastAPI()
 
 @app.get("/")
