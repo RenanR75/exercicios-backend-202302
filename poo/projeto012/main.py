@@ -14,7 +14,7 @@ def getContinents():
     mycursor.execute(sql)
     for data_continents in mycursor:
         Continents_list.append( data_continents )
-    mycursor.close()
+    mycursor.close()                                                                                                                                                                                   
     return {"Continents": Continents_list}
 
 @app.get("/getContinents/{continent_id}")
