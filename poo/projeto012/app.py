@@ -13,8 +13,8 @@ def consultaContinentes():
     build_direction = "LEFT_TO_RIGHT"
     table_attributes = {"style" : "width:100%"}
     html = json2table.convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
-    print(html)
-    return response2.json()
+    #print(html)
+    #return response2.json()
     return html
 
 @app.route("/consultaRegioes")
