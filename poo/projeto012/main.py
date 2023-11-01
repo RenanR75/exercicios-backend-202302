@@ -28,6 +28,7 @@ def getContinents(continent_id : int):
     mycursor.close()
     return {"Continents": Continents_list}
 
+################################################################
 @app.post('/createContinent/{continent_name}')
 def createContinent(continent_name: str):
     if continent_name == "":
@@ -37,6 +38,12 @@ def createContinent(continent_name: str):
     mycursor.execute(sql)
     mycursor.close()
     return {"Continent: OK"}
+################################################################
+################################################################
+class Continent(BaseModel):
+   continent_name :str = Field(None, title="nome dos continentes", max_length=25)      
+
+
 
 @app.post('/createContinent2')
 def createContinent2(info: Continent):
