@@ -1,4 +1,4 @@
-import flask, requests
+import flask, requests, json2table
 app = flask.Flask(__name__)
 
 @app.route("/")
