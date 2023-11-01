@@ -44,8 +44,6 @@ def createContinent(continent_name: str, continent_description: str):
 class Continent(BaseModel):
    continent_name :str = Field(None, title="nome dos continentes", max_length=25)
 
-
-
 @app.post('/createContinent2')
 def createContinent2(info: Continent):
     #Continent_details = json.loads(Continent)
@@ -54,6 +52,7 @@ def createContinent2(info: Continent):
     mycursor = connection.mydb.cursor(dictionary=True)
     sql=" INSERT INTO continents (name) values ('{0}')".format(info.continent_name)
     mycursor.execute(sql)
+    mycursor.execute("COMMIT;")
     mycursor.close()
     return {
         "status" : "SUCCESS",
