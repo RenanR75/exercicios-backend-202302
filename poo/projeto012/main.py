@@ -14,7 +14,7 @@ def getContinents():
     mycursor.execute(sql)
     for data_continents in mycursor:
         Continents_list.append( data_continents )
-    mycursor.close()                                                                                                                                                                                   
+    mycursor.close()
     return {"Continents": Continents_list}
 
 @app.get("/getContinents/{continent_id}")
@@ -37,6 +37,21 @@ def createContinent(continent_name: str):
     mycursor.execute(sql)
     mycursor.close()
     return {"Continent: OK"}
+
+@app.post('/createContinent2')
+def createContinent2(info: Continent):
+    #Continent_details = json.loads(Continent)
+    if info.continent_name == "":
+        return {'Error': 'Item vazio'}
+    mycursor = connection.mydb.cursor(dictionary=True)
+    sql=" INSERT INTO continents (name) values ('{0}')".format(info.continent_name)
+    mycursor.execute(sql)
+    mycursor.close()
+    return {
+        "status" : "SUCCESS",
+        "data" : info.continent_name
+    }
+################################################################
 
 @app.get("/getRegions")
 def getRegions():
